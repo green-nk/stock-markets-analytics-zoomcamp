@@ -1,5 +1,7 @@
 # Stock Market Analytics Zoomcamp
 
+The purpose of this course is to gain practical skills for implementing personal projects related to algorithmic trading or applying to your daily jobs.
+
 <p align="center">
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5H6Jc-HJg9B7irveRASJCAS4BTnJcvM2QX2ykIGZ0UNgCPQ/viewform"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
 </p>
@@ -178,4 +180,3 @@ To make discussions in Slack more organized:
   * DO NOT create multiple posts to discuss the issue.
   * You may create a new post if the issue reemerges down the road. Be sure to describe what has changed in the environment.
   * Provide additional information in the same thread of the steps you have taken for resolution.
-
