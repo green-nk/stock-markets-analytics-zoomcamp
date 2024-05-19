@@ -29,8 +29,8 @@ Find the total sum in $m (millions of USD, closest INTEGER number) for all filin
 Reuse [Code Snippet 1] to retrieve the list of IPOs from 2023 and 2024 (from URLs: https://stockanalysis.com/ipos/2023/ and https://stockanalysis.com/ipos/2024/). 
 Get all OHLCV daily prices for all stocks with an "IPO date" before March 1, 2024 ("< 2024-03-01") - 184 tickers (without 'RYZB'). Please remove 'RYZB', as it is no longer available on Yahoo Finance. 
 
-Sometimes you may need to adjust the symbol name (e.g., 'IBAC' on stockanalysis.com -> 'IBACU' on Yahoo Finance) to locate OHLCV prices for all stocks.
-Some of the tickers like 'DYCQ' and 'LEGT' were on the market less than 30 days (11 and 21 days, respectively). Let's leave them in the dataset; it just means that you couldn't hold them for more days than they were listed.
+Sometimes you may need to adjust the symbol name (e.g., 'IBAC' on stockanalysis.com -> 'IBACU' on Yahoo Finance) to locate OHLCV prices for all stocks. Also, you can see the ticker changes using this [link](https://stockanalysis.com/actions/changes/).
+Some of the tickers (like 'DYCQ' and 'LEGT') were on the market less than 30 days (11 and 21 days, respectively). Let's leave them in the dataset; it just means that you couldn't hold them for more days than they were listed.
 
 Let's assume you managed to buy a new stock (listed on IPO) on the first day at the [Adj Close] price]. Your strategy is to hold for exactly X full days (where X is between 1 and 30) and sell at the "Adj. Close" price in X days (e.g., if X=1, you sell on the next day).
 Find X, when the 75% quantile growth (among 185 investments) is the highest. 
@@ -51,7 +51,7 @@ Additional:
 **Get the share of days (percentage as int) when Large Stocks outperform (growth_7d - growth over 7 periods back) the Largest stocks?**
 
 
-Reuse [Code Snippet 5] to obtain OHLCV stats for 33 stocks 
+Reuse [Code Snippet 7] to obtain OHLCV stats for 33 stocks 
 for 10 full years of data (2014-01-01 to 2023-12-31). You'll need to download slightly more data (7 periods before 2014-01-01 to calculate the growth_7d for the first 6 days correctly):
 
 `US_STOCKS = ['MSFT', 'AAPL', 'GOOG', 'NVDA', 'AMZN', 'META', 'BRK-B', 'LLY', 'AVGO','V', 'JPM']`
@@ -68,9 +68,9 @@ Now let's add the top 12-22 stocks (as of end-April 2024):
 
 `NEW_US = ['TSLA','WMT','XOM','UNH','MA','PG','JNJ','MRK','HD','COST','ORCL']`
 
-`NEW_EU = ['PRX.AS','CDI.PA','AIR.PA','SU.PA','ETN','SNY','BUD','DTE.DE','ALV.DE','MDT','AI.PA','EL.PA']`
+`NEW_EU = ['PRX.AS','AIR.PA','SU.PA','ETN','SNY','BUD','DTE.DE','ALV.DE','MDT','AI.PA','EL.PA']`
 
-`NEW_INDIA = ['BAJFINANCE.NS','MARUTI.NS','HCLTECH.NS','TATAMOTORS.NS','SUNPHARMA.NS','ONGC.NS','ADANIENT.NS','ADANIENT.NS','NTPC.NS','KOTAKBANK.NS','TITAN.NS']`
+`NEW_INDIA = ['BAJFINANCE.NS','MARUTI.NS','HCLTECH.NS','TATAMOTORS.NS','SUNPHARMA.NS','ONGC.NS','ADANIENT.NS','NTPC.NS','KOTAKBANK.NS','TITAN.NS']`
 
 `LARGE_STOCKS = NEW_EU + NEW_US + NEW_INDIA`
 
@@ -128,5 +128,10 @@ E.g. (some ideas) Do you want to focus on the specific vertical? Do you want to 
 ## Submitting the solutions
 
 Form for submitting: https://courses.datatalks.club/sma-zoomcamp-2024/homework/hw02
+
+---
+## Leaderboard
+
+Leaderboard link: https://courses.datatalks.club/sma-zoomcamp-2024/leaderboard
 
 ---
